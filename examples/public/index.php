@@ -17,9 +17,9 @@ $res['Content-Type'] = 'application/json';
 $app->get('/favorites/:name', function ($name) use ($app, $client) {
 
 	// request parameters
-    $params = array('screen_name' => $name, 'count' => 2);
+	$params = array('screen_name' => $name, 'count' => 2);
 
-    // make request to the api
+	// make request to the api
 	$data = $client->api_request('favorites/list.json', $params);
 
 	// return data
