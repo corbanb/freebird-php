@@ -3,7 +3,7 @@
 
   "name": "mademovement/freebird",
 
-  "description": "Twitter application only authoization library",
+  "description": "Twitter API v1.1 Application only authoization library",
 
   "keywords": ["twitter", "api", "sdk", "freebird", "application", "app only auth"],
 
@@ -23,6 +23,7 @@
   "type": "library",
 
   "require": {
+    "php": ">=5.3.0",
     "guzzle/guzzle": "3.1.*"
   },
 
