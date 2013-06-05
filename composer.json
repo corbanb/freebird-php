@@ -1,0 +1,40 @@
+
+{
+
+  "name": "made/freebird",
+
+  "description": "Twitter application only authoization library",
+
+  "keywords": ["twitter", "api", "sdk", "freebird", "application", "app only auth"],
+
+  "homepage": "https://github.com/mademovement/freebird",
+
+  "authors": [
+    {
+      "name": "Corban Baxter",
+      "email": "cbaxter@mademovement.com",
+      "homepage": "https://github.com/mademovement",
+      "role": "developer"
+    }
+  ],
+
+  "license": "Apache-2.0",
+
+  "type": "library",
+
+  "require": {
+    "guzzle/guzzle": "3.1.*"
+  },
+
+  "require-dev": {
+    "phpunit/phpunit": "*",
+    "slim/slim": "dev-develop"
+  },
+
+  "autoload": {
+    "psr-0": {
+      "Made\\Services\\freebird": "lib"
+    }
+  }
+
+}
