@@ -6,7 +6,7 @@ class Client
 {
 
 	/**
-	 * Create a new Freebird
+	 * Create a new Freebird Client
 	 * @param [string] $consumer_key    [Twitter Application Consumer Key]
 	 * @param [string] $consumer_secret [Twitter Application Consumer Secret Key]
 	 */
@@ -19,6 +19,12 @@ class Client
 
 	}
 
+	/**
+	 * Simple method to make requests to the Twitter API
+	 * @param  [string] $path    [description]
+	 * @param  [array] $options [description]
+	 * @return [json]          [description]
+	 */
 	public function api_request ($path, $options){
 
 		$data = $this->requestHandler->request($path, $options);

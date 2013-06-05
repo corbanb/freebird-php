@@ -20,6 +20,12 @@ class RequestHandler
         
     }
 
+    /**
+     * Encodes the Bearer according to twitter's standards
+     * @param  [string] $consumer_key    Your Twitter Application Consumer Key
+     * @param  [string] $consumer_secret Your Twitter Application Consumer Secret Key
+     * @return [string]                  Your encoded Twitter Bearer token credentials
+     */
     private function encodeBearer ($consumer_key, $consumer_secret){
 
         // Create Bearer Token as per Twitter recomends at 
@@ -30,6 +36,13 @@ class RequestHandler
 
     }
 
+    /**
+     * Calling this method will establish the hand shake with Twitter OAuth as an application
+     * and return this sessions Bearer Token to be used for the call being made
+     * @param  [string] $consumer_key    Your Twitter Application Consumer Key
+     * @param  [string] $consumer_secret Your Twitter Application Consumer Secret Key
+     * @return [string]                  Twitter OAuth Bearer Access Token
+     */
     public function authenticateApp ($consumer_key, $consumer_secret) {
 
         $bearer_token = $this->encodeBearer($consumer_key, $consumer_secret);
@@ -52,15 +65,15 @@ class RequestHandler
     /**
      * Make a request with this request handler
      *
-     * @param string $path    the path to hit
-     * @param array  $options the array of params
+     * @param string $path    Twitter resource path
+     * @param array  $options the array of params to pass to the resource
      *
      * @return \stdClass response object
      */
     public function request($path, $options)
     {
         // Ensure we have options
-        //$options ?: array();
+        $options ?: array();
 
         $headers = array(
             'Authorization' => 'Bearer ' . $this->bearer
