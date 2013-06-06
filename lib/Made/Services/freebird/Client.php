@@ -10,13 +10,20 @@ class Client
 	 * @param [string] $consumer_key    [Twitter Application Consumer Key]
 	 * @param [string] $consumer_secret [Twitter Application Consumer Secret Key]
 	 */
-	public function __construct ($consumer_key, $consumer_secret) {
-
+	public function __construct () 
+	{
 		$this->requestHandler = new RequestHandler();
-		
-		// Establishes Twitter Applications Authentication token for this session.
-		$this->requestHandler->authenticateApp($consumer_key, $consumer_secret);
+	}
 
+	public function init_bearer_token ($consumer_key, $consumer_secret)
+	{
+		// Establishes Twitter Applications Authentication token for this session.
+		return $this->requestHandler->authenticateApp($consumer_key, $consumer_secret);
+	}
+
+	public function set_bearer_token ($bearer_token)
+	{
+		$this->requestHandler->set_bearer_token($bearer_token);
 	}
 
 	/**
@@ -25,11 +32,10 @@ class Client
 	 * @param  [array] $options [description]
 	 * @return [json]          [description]
 	 */
-	public function api_request ($path, $options){
-
+	public function api_request ($path, $options)
+	{
 		$data = $this->requestHandler->request($path, $options);
 		return json_encode($data->json);
-
 	}
 
 }

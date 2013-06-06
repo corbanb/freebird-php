@@ -15,9 +15,14 @@ class RequestHandler
     /**
      * Instantiate a new RequestHandler
      */
-    public function __construct()
+    public function __construct ()
     {
-        
+        $this->client = new \Guzzle\Http\Client('https://api.twitter.com/1.1');
+    }
+
+    public function set_bearer_token ($bearer_token) 
+    {
+        $this->bearer = $bearer_token;
     }
 
     /**
@@ -56,10 +61,10 @@ class RequestHandler
         // Twitter Required Body
         $body = 'grant_type=client_credentials';
         
-        $this->client = new \Guzzle\Http\Client('https://api.twitter.com/1.1');
         $response = $this->client->post('/oauth2/token', $headers, $body)->send();
         $data = $response->json();
         $this->bearer = $data['access_token'];
+        return $this->bearer;
     }
 
     /**
