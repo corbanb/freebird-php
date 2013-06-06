@@ -14,7 +14,7 @@ The recomended way to install **Freebird** is through [Composer](http://getcompo
 # Install Composer
 curl -sS https://getcomposer.org/installer | php
 
-# Add Guzzle as a dependency
+# Add Freebird as a dependency
 php composer.phar require mademovement/freebird:~0.1.1
 ```
 
