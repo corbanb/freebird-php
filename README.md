@@ -41,7 +41,14 @@ Once installed you can easily access all of the Twitter API endpoints supported 
 <?php
 
 // Setup freebird Client with Twitter application keys
-$client = new Made\Services\freebird\Client('your_consumer_key', 'your_consumer_secret_key');
+$client = new Made\Services\freebird\Client();
+
+// init bearer token
+$client->init_bearer_token('your_key', 'your_secret_key');
+
+// optional set bearer token if already aquired
+// $client->set_bearer_token('your_bearer_token');
+
 
 // Request API enpoint data
 $response = $client->api_request('favorites/list.json', array('screen_name' => 'madesays'));
