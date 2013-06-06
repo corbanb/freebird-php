@@ -1,4 +1,4 @@
-FreeBird - Twitter App Only Auth
+Freebird - Twitter App Only Auth
 ===
 
 ## Welcome
