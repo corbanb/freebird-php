@@ -1,6 +1,6 @@
 <?php
 
-namespace Made\Services\freebird;
+namespace Freebird\Services\freebird;
 
 /**
  * A request handler for Tumblr authentication

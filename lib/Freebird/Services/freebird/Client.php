@@ -1,6 +1,6 @@
 <?php
 
-namespace Made\Services\freebird;
+namespace Freebird\Services\freebird;
 
 class Client
 {

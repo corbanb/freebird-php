@@ -1,19 +1,19 @@
 
 {
 
-  "name": "mademovement/freebird-php",
+  "name": "corbanb/freebird-php",
 
   "description": "Twitter API v1.1 Application only authoization library",
 
   "keywords": ["twitter", "api", "sdk", "freebird", "application", "app only auth"],
 
-  "homepage": "https://github.com/mademovement/freebird-php",
+  "homepage": "https://github.com/corbanb/freebird-php",
 
   "authors": [
     {
       "name": "Corban Baxter",
-      "email": "cbaxter@mademovement.com",
-      "homepage": "https://github.com/mademovement",
+      "email": "corbanb@gmail.com",
+      "homepage": "https://github.com/corbanb",
       "role": "developer"
     }
   ],
@@ -34,7 +34,7 @@
 
   "autoload": {
     "psr-0": {
-      "Made\\Services\\freebird": "lib"
+      "Freebird\\Services\\freebird": "lib"
     }
   }
 

@@ -8,7 +8,7 @@ require __DIR__ . '/../../vendor/autoload.php';
 $app = new \Slim\Slim();
 
 // setup freebird Client with application keys
-$client = new Made\Services\freebird\Client();
+$client = new Freebird\Services\freebird\Client();
 //$client->init_bearer_token('your_key', 'your_secret_key');
 $client->set_bearer_token('your_bearer');
 
