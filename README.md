@@ -15,7 +15,7 @@ The recomended way to install **Freebird** is through [Composer](http://getcompo
 curl -sS https://getcomposer.org/installer | php
 
 # Add Freebird as a dependency
-php composer.phar require mademovement/freebird:~0.1.1
+php composer.phar require corbanb/freebird:~0.1.1
 ```
 
 After installing, you need to require Composer's autoloader:
@@ -41,7 +41,7 @@ Once installed you can easily access all of the Twitter API endpoints supported 
 <?php
 
 // Setup freebird Client with Twitter application keys
-$client = new Made\Services\freebird\Client();
+$client = new Freebird\Services\freebird\Client();
 
 // init bearer token
 $client->init_bearer_token('your_key', 'your_secret_key');
@@ -51,7 +51,7 @@ $client->init_bearer_token('your_key', 'your_secret_key');
 
 
 // Request API enpoint data
-$response = $client->api_request('favorites/list.json', array('screen_name' => 'madesays'));
+$response = $client->api_request('favorites/list.json', array('screen_name' => 'corbanb'));
 
 // return api data
 echo $response;
