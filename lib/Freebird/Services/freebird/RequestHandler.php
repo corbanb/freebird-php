@@ -25,6 +25,11 @@ class RequestHandler
         $this->bearer = $bearer_token;
     }
 
+    public function get_bearer_token ()
+    {
+        return $this->bearer;
+    }
+
     /**
      * Encodes the Bearer according to twitter's standards
      * @param  [string] $consumer_key    Your Twitter Application Consumer Key
