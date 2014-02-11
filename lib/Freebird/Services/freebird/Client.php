@@ -28,7 +28,7 @@ class Client
 
   public function get_bearer_token ()
   {
-    return $this->RequestHandler->get_bearer_token();
+    return $this->requestHandler->get_bearer_token();
   }
 
 	/**
