@@ -26,6 +26,11 @@ class Client
 		$this->requestHandler->set_bearer_token($bearer_token);
 	}
 
+	public function get_bearer_token ()
+	{
+		return $this->requestHandler->get_bearer_token();
+	}
+
 	/**
 	 * Simple method to make requests to the Twitter API
 	 * @param  [string] $path    [description]
