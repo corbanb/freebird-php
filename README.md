@@ -15,7 +15,7 @@ The recomended way to install **Freebird** is through [Composer](http://getcompo
 curl -sS https://getcomposer.org/installer | php
 
 # Add Freebird as a dependency
-php composer.phar require corbanb/freebird:~0.1.1
+php composer.phar require corbanb/freebird-php:~0.2.2
 ```
 
 After installing, you need to require Composer's autoloader:
