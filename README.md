@@ -36,8 +36,7 @@ require 'vendor/autoload.php';
 
 Once installed you can easily access all of the Twitter API endpoints supported by [Application Only Authentication](https://dev.twitter.com/docs/auth/application-only-auth). You can view those enpoints [here](https://dev.twitter.com/docs/rate-limiting/1.1/limits). 
 
-```
-
+```php
 <?php
 
 // Setup freebird Client with Twitter application keys
@@ -49,16 +48,12 @@ $client->init_bearer_token('your_key', 'your_secret_key');
 // optional set bearer token if already aquired
 // $client->set_bearer_token('your_bearer_token');
 
-
 // Request API enpoint data
 $response = $client->api_request('favorites/list.json', array('screen_name' => 'corbanb'));
 
 // return api data
 echo $response;
-
-
 ```
-
 
 ## Unit Testing
 
