@@ -1,12 +1,10 @@
 {
 
   "name": "corbanb/freebird-php",
-
   "description": "Twitter API v1.1 Application only authoization library",
-
   "keywords": ["twitter", "api", "sdk", "freebird", "application", "app only auth"],
-
   "homepage": "https://github.com/corbanb/freebird-php",
+  "version": "2.3.4",
 
   "authors": [
     {
@@ -18,7 +16,6 @@
   ],
 
   "license": "MIT",
-
   "type": "library",
 
   "require": {
