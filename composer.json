@@ -23,12 +23,12 @@
 
   "require": {
     "php": ">=5.3.0",
-    "guzzle/guzzle": "3.8.*"
+    "guzzle/guzzle": "~3.8"
   },
 
   "require-dev": {
     "phpunit/phpunit": "*",
-    "slim/slim": "dev-develop"
+    "slim/slim": "*"
   },
 
   "autoload": {
